@@ -1,0 +1,17 @@
+-p src/
+-D no-deprecation-warnings
+--library random
+--library polygonal-printf
+--library tink_core
+--library image
+--dce full
+--main Main
+--each
+
+--neko build/neko/albumgrab.n
+--cmd nekotools boot build/neko/albumgrab.n
+
+--next
+
+--cpp build/cpp/
+
